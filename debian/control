@@ -7,7 +7,7 @@ Build-Depends:
  deepin-gettext-tools,
  dh-golang,
  golang-any,
- golang-dlib-dev (>> 5.4.1+),
+ golang-dlib-dev (>=5.7.12~),
  golang-gir-gio-2.0-dev (>> 1.2.0+),
  golang-gir-glib-2.0-dev (>> 1.2.0+),
  golang-gir-gobject-2.0-dev (>> 1.2.0+),
@@ -16,7 +16,7 @@ Build-Depends:
  golang-github-fogleman-gg-dev,
  golang-github-gosexy-gettext-dev,
  golang-github-jinzhu-gorm-dev,
- golang-github-linuxdeepin-go-dbus-factory-dev (>> 0.7.0+),
+ golang-github-linuxdeepin-go-dbus-factory-dev (>=1.9.22~),
  golang-github-linuxdeepin-go-x11-client-dev (>= 0.0.4),
  golang-github-mattn-go-sqlite3-dev,
  golang-github-nfnt-resize-dev,
@@ -35,8 +35,9 @@ Build-Depends:
  libsqlite3-dev,
  libxi-dev,
  systemd,
-Standards-Version: 3.9.8
+Standards-Version: 4.5.1
 Homepage: http://www.deepin.org
+XS-Go-Import-Path: pkg.deepin.io/dde/api
 
 Package: dde-api
 Architecture: any
@@ -63,14 +64,14 @@ Description: Go-lang bingdings for dde-daemon
 Package: dde-api-dev
 Architecture: all
 Depends:
- golang-dlib-dev(>= 1.2.13),
+ golang-dlib-dev(>=5.7~),
  golang-gir-gio-2.0-dev (>> 1.2.0+),
  golang-gir-glib-2.0-dev (>> 1.2.0+),
  golang-gir-gobject-2.0-dev (>> 1.2.0+),
  golang-gir-gudev-1.0-dev (>> 1.2.0+),
  golang-github-gosexy-gettext-dev,
- golang-github-linuxdeepin-go-dbus-factory-dev (>> 0.7.0+),
- golang-github-linuxdeepin-go-x11-client-dev (>= 0.0.4),
+ golang-github-linuxdeepin-go-dbus-factory-dev (>=1.9~),
+ golang-github-linuxdeepin-go-x11-client-dev,
  golang-gopkg-alecthomas-kingpin.v2-dev,
  libcairo2-dev,
  libcanberra-dev,

@@ -1,10 +1,7 @@
 #!/usr/bin/make -f
 export GOCACHE = /tmp/gocache
 export GOPATH := /usr/share/gocode
-ifeq ($(DEB_BUILD_ARCH),sw_64)
-	export GOFLAGS = -vet=off
-endif
-
+export GO111MODULE := off
 %:
 	dh $@
 
