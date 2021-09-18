@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+export GOCACHE = /tmp/gocache
+export GOPATH := /usr/share/gocode
+ifeq ($(DEB_BUILD_ARCH),sw_64)
+	export GOFLAGS = -vet=off
+endif
+
+%:
+	dh $@
+
+override_dh_strip:
+	dh_strip --dbgsym-migration=dde-api-dbg
+
+override_dh_installsystemd:
+	dh_installsystemd --no-start
